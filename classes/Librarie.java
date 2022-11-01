@@ -2,7 +2,7 @@ package classes;
 
 import java.util.ArrayList;
 
-public class Librarie {
+public class Librarie extends LibrarieModel {
     ArrayList<Carte> carti = new ArrayList<Carte>();
     private final int PRETMAXIMCARTE;
 
