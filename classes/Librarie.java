@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Librarie extends LibrarieModel {
-    ArrayList<Carte> carti = new ArrayList<Carte>();
+    private ArrayList<Carte> carti = new ArrayList<Carte>();
 
     // constructor
     public Librarie(int p) {
