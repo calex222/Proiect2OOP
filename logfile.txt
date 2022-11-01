@@ -72,3 +72,59 @@ Adauga button pressedAdauga button pressed2022-11-01 17:42:12.335Adauga button p
 2022-11-01 21:46:02.229 : Alege button pressed, no error
 2022-11-01 21:46:05.263 : Back button pressed, no error
 2022-11-01 21:46:05.861 : Exit button pressed, no error
+2022-11-01 22:07:55.138 : Stoc carti button pressed, no error
+2022-11-01 22:07:57.704 : Back button pressed, no error
+2022-11-01 22:07:58.432 : Adauga button pressed, no error
+2022-11-01 22:08:12.016 : Adauga button pressed, no error
+2022-11-01 22:08:17.392 : Adauga button pressed, no error
+2022-11-01 22:08:24.216 : Alege button pressed, no error
+2022-11-01 22:08:27.864 : Back button pressed, no error
+2022-11-01 22:08:28.545 : Stoc carti button pressed, no error
+2022-11-01 22:08:30.944 : Back button pressed, no error
+2022-11-01 22:08:35.968 : Back button pressed, no error
+2022-11-01 22:08:36.792 : Adauga button pressed, no error
+2022-11-01 22:08:42.432 : Back button pressed, no error
+2022-11-01 22:08:43.016 : Stoc carti button pressed, no error
+2022-11-01 22:08:43.984 : Back button pressed, no error
+2022-11-01 22:08:44.352 : Exit button pressed, no error
+2022-11-01 22:09:51.77 : Stoc carti button pressed, no error
+2022-11-01 22:09:52.449 : Back button pressed, no error
+2022-11-01 22:09:53.073 : Adauga button pressed, no error
+2022-11-01 22:10:03.201 : Alege button pressed, no error
+2022-11-01 22:10:06.049 : Back button pressed, no error
+2022-11-01 22:10:06.552 : Stoc carti button pressed, no error
+2022-11-01 22:10:07.353 : Back button pressed, no error
+2022-11-01 22:10:07.961 : Exit button pressed, no error
+2022-11-01 22:18:10.326 : Scoate button pressed, no error
+2022-11-01 22:18:11.132 : Back button pressed, no error
+2022-11-01 22:18:11.74 : Stoc carti button pressed, no error
+2022-11-01 22:18:12.355 : Back button pressed, no error
+2022-11-01 22:18:13.7 : Scoate button pressed, no error
+2022-11-01 22:18:14.395 : Back button pressed, no error
+2022-11-01 22:18:15.315 : Stoc carti button pressed, no error
+2022-11-01 22:18:15.908 : Back button pressed, no error
+2022-11-01 22:18:17.195 : Scoate button pressed, no error
+2022-11-01 22:18:18.347 : Back button pressed, no error
+2022-11-01 22:18:18.707 : Exit button pressed, no error
+2022-11-01 22:18:39.59 : Exit button pressed, no error
+2022-11-01 22:19:41.869 : Stoc carti button pressed, no error
+2022-11-01 22:19:42.429 : Back button pressed, no error
+2022-11-01 22:19:49.948 : Back button pressed, no error
+2022-11-01 22:19:50.485 : Scoate button pressed, no error
+2022-11-01 22:19:51.316 : Back button pressed, no error
+2022-11-01 22:19:51.636 : Exit button pressed, no error
+2022-11-01 22:20:04.453 : Adauga button pressed, no error
+2022-11-01 22:20:12.196 : Adauga button pressed, no error
+2022-11-01 22:20:18.117 : Back button pressed, no error
+2022-11-01 22:20:19.188 : Exit button pressed, no error
+2022-11-01 22:22:40.863 : Adauga button pressed, no error
+2022-11-01 22:22:44.837 : Adauga button pressed, no error
+2022-11-01 22:22:49.261 : Back button pressed, no error
+2022-11-01 22:22:49.749 : Stoc carti button pressed, no error
+2022-11-01 22:22:52.597 : Back button pressed, no error
+2022-11-01 22:22:53.197 : Scoate button pressed, no error
+2022-11-01 22:22:55.621 : Alege button pressed, no error
+2022-11-01 22:22:59.117 : Back button pressed, no error
+2022-11-01 22:22:59.709 : Stoc carti button pressed, no error
+2022-11-01 22:23:01.686 : Back button pressed, no error
+2022-11-01 22:23:02.261 : Exit button pressed, no error

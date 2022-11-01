@@ -20,11 +20,15 @@ public class Proiect2OOP implements ActionListener {
     private JPanel adaugaMenuPanel = new JPanel();
     private JPanel scoateMenuPanel = new JPanel();
     private JButton stocCartiButton = new JButton("STOC CARTI");
+    private JButton adaugaButonMeniu = new JButton("ADAUGA CARTE NOUA");
     private JButton adaugaButton = new JButton("ADAUGA CARTE");
     private JButton alegeButton = new JButton("ALEGETI CARTE PE INDEX");
     private JButton scoateButton = new JButton("SCOATE CARTE");
     private JButton exitButton = new JButton("EXIT");
     private JButton backButton = new JButton("BACK");
+    private JLabel instructiuniAdaugare = new JLabel(
+            "Dati un titlu, un autor si un cost." + "\n"
+                    + "Costul trebuie sa fie un numar intreg pozitiv mai mare de 0 si mai mic decat 500");
 
     private JLabel stocCartiGol = new JLabel("LIBRARIA NU ARE CARTI", SwingConstants.CENTER);
 
@@ -48,7 +52,7 @@ public class Proiect2OOP implements ActionListener {
 
         mainMenuPanel.add(titluLibrarieLabel);
         mainMenuPanel.add(stocCartiButton);
-        mainMenuPanel.add(adaugaButton);
+        mainMenuPanel.add(adaugaButonMeniu);
         mainMenuPanel.add(scoateButton);
         mainMenuPanel.add(exitButton);
         mainMenuPanel.setPreferredSize(new Dimension(1600, 900));
@@ -67,7 +71,7 @@ public class Proiect2OOP implements ActionListener {
         // setup panel adauga
 
         adaugaMenuPanel.setPreferredSize(new Dimension(1600, 900));
-        adaugaMenuPanel.setLayout(new GridLayout(1, 1));
+        adaugaMenuPanel.setLayout(new GridLayout(3, 1));
 
         // setup panel scoate
 
@@ -76,10 +80,24 @@ public class Proiect2OOP implements ActionListener {
 
         // pregatire butoane
 
+        adaugaButonMeniu.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                frame.remove(mainMenuPanel);
+                adaugaMenuPanel.add(instructiuniAdaugare);
+                adaugaMenuPanel.add(adaugaButton);
+                adaugaMenuPanel.add(backButton);
+                frame.add(adaugaMenuPanel);
+                frame.repaint();
+                frame.setVisible(true);
+            }
+        });
+
         backButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Logger.getInstance().writeLog(loggerMessageFormat("Back button pressed, no error"));
                 stocMenuPanel.removeAll();
+                scoateMenuPanel.removeAll();
+                adaugaMenuPanel.removeAll();
                 frame.remove(stocMenuPanel);
                 frame.remove(adaugaMenuPanel);
                 frame.remove(scoateMenuPanel);
@@ -91,7 +109,7 @@ public class Proiect2OOP implements ActionListener {
 
         scoateButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
+                Logger.getInstance().writeLog(loggerMessageFormat("Scoate button pressed, no error"));
                 if (libCarti.getNrCarti() == 0) {
                     javax.swing.JOptionPane.showMessageDialog(null, "Libraria nu are carti!", "Fail",
                             JOptionPane.ERROR_MESSAGE);
@@ -126,6 +144,7 @@ public class Proiect2OOP implements ActionListener {
                     javax.swing.JOptionPane.showMessageDialog(null, "Indexul nu a fost gasti", "Eroare index",
                             JOptionPane.ERROR_MESSAGE);
                 } else {
+                    libCarti.scoateCarteLaIndex(indexInt);
                     javax.swing.JOptionPane.showMessageDialog(null, "Cartea a fost scoasa cu succes", "Succes",
                             JOptionPane.INFORMATION_MESSAGE);
                 }
@@ -178,12 +197,14 @@ public class Proiect2OOP implements ActionListener {
                             JOptionPane.ERROR_MESSAGE);
                     costString = javax.swing.JOptionPane.showInputDialog("Costul cartii: ");
                 }
-                if (Integer.parseInt(costString) < libCarti.getPretMaximCarte()) {
+                if ((Integer.parseInt(costString) > 0)
+                        && (Integer.parseInt(costString) < libCarti.getPretMaximCarte())) {
                     libCarti.adaugaCarte(titlu, autor, Integer.parseInt(costString));
                     javax.swing.JOptionPane.showMessageDialog(null, "Carte adaugata cu succes", "Succes",
                             JOptionPane.INFORMATION_MESSAGE);
                 } else {
-                    javax.swing.JOptionPane.showMessageDialog(null, "Cartea nu a fost adaugata, pret prea mare", "Fail",
+
+                    javax.swing.JOptionPane.showMessageDialog(null, "Cartea nu a fost adaugata, pret incorect", "Fail",
                             JOptionPane.ERROR_MESSAGE);
                 }
             }

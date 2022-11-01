@@ -32,8 +32,17 @@ public class Librarie extends LibrarieModel {
 
     }
 
-    public void scoateCarteLaIndex() {
-
+    public void scoateCarteLaIndex(int i) {
+        carti.remove(i);
+        try {
+            FileWriter cartiData = new FileWriter("cartiData.txt");
+            for (int x = 0; x < carti.size(); x++) {
+                cartiData.write("\n" + carti.get(x).toString());
+            }
+            cartiData.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void adaugaFromFile(String titlu, String autor, int cost) {
