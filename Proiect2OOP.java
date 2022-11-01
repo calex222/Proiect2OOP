@@ -21,6 +21,7 @@ public class Proiect2OOP implements ActionListener {
     private JPanel scoateMenuPanel = new JPanel();
     private JButton stocCartiButton = new JButton("STOC CARTI");
     private JButton adaugaButton = new JButton("ADAUGA CARTE");
+    private JButton alegeButton = new JButton("ALEGETI CARTE PE INDEX");
     private JButton scoateButton = new JButton("SCOATE CARTE");
     private JButton exitButton = new JButton("EXIT");
     private JButton backButton = new JButton("BACK");
@@ -90,8 +91,44 @@ public class Proiect2OOP implements ActionListener {
 
         scoateButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                frame.remove(mainMenuPanel);
 
+                if (libCarti.getNrCarti() == 0) {
+                    javax.swing.JOptionPane.showMessageDialog(null, "Libraria nu are carti!", "Fail",
+                            JOptionPane.ERROR_MESSAGE);
+                } else {
+                    frame.remove(mainMenuPanel);
+                    scoateMenuPanel.setLayout(new GridLayout(libCarti.getNrCarti() + 2, 1));
+                    ArrayList<JLabel> labelCarte = new ArrayList<JLabel>();
+                    for (int i = 0; i < libCarti.getNrCarti(); i++) {
+                        labelCarte.add(new JLabel(libCarti.getCarteLaIndex(i).toString() + "  LA INDEX  " + i));
+                        scoateMenuPanel.add(labelCarte.get(i));
+                    }
+                    scoateMenuPanel.add(alegeButton);
+                    scoateMenuPanel.add(backButton);
+                    frame.add(scoateMenuPanel);
+                    frame.repaint();
+                    frame.setVisible(true);
+                }
+            }
+        });
+
+        alegeButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Logger.getInstance().writeLog(loggerMessageFormat("Alege button pressed, no error"));
+                String indexString = javax.swing.JOptionPane.showInputDialog("INDEX: ");
+                while (!isNumeric(indexString)) {
+                    javax.swing.JOptionPane.showMessageDialog(null, "Dati un numar intreg", "Eroare numerica",
+                            JOptionPane.ERROR_MESSAGE);
+                    indexString = javax.swing.JOptionPane.showInputDialog("Costul cartii: ");
+                }
+                int indexInt = Integer.parseInt(indexString);
+                if (indexInt < 0 || indexInt > (libCarti.getNrCarti() - 1)) {
+                    javax.swing.JOptionPane.showMessageDialog(null, "Indexul nu a fost gasti", "Eroare index",
+                            JOptionPane.ERROR_MESSAGE);
+                } else {
+                    javax.swing.JOptionPane.showMessageDialog(null, "Cartea a fost scoasa cu succes", "Succes",
+                            JOptionPane.INFORMATION_MESSAGE);
+                }
             }
         });
 
@@ -117,9 +154,10 @@ public class Proiect2OOP implements ActionListener {
                     stocMenuPanel.setLayout(new GridLayout(libCarti.getNrCarti() + 1, 1));
                     ArrayList<JLabel> labelCarte = new ArrayList<JLabel>();
                     for (int i = 0; i < libCarti.getNrCarti(); i++) {
-                        labelCarte.add(new JLabel(libCarti.getCarteLaIndex(i).toString()));
+                        labelCarte.add(new JLabel(libCarti.getCarteLaIndex(i).toString() + "  LA INDEX  " + i));
                         stocMenuPanel.add(labelCarte.get(i));
                     }
+
                     stocMenuPanel.add(backButton);
                     frame.add(stocMenuPanel);
                     frame.repaint();

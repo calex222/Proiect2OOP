@@ -32,6 +32,10 @@ public class Librarie extends LibrarieModel {
 
     }
 
+    public void scoateCarteLaIndex() {
+
+    }
+
     private void adaugaFromFile(String titlu, String autor, int cost) {
         Carte c = new Carte(titlu, autor, cost);
         carti.add(c);
