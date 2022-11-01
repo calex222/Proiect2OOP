@@ -3,8 +3,13 @@ import java.awt.*;
 import javax.swing.*;
 
 import classes.Librarie;
+import classes.Logger;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import java.awt.event.*;
+import java.sql.Timestamp;
 
 public class Proiect2OOP implements ActionListener {
 
@@ -25,7 +30,14 @@ public class Proiect2OOP implements ActionListener {
     public void actionPerformed(ActionEvent e) {
     }
 
+    private String loggerMessageFormat(String s) {
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        return (timestamp.toString() + " : " + s + "\n");
+    }
+
     public Proiect2OOP() {
+
+        Logger.getInstance().init();
 
         JLabel titluLibrarieLabel = new JLabel("LIBRARIE", SwingConstants.CENTER);
         titluLibrarieLabel.setFont(new Font("Serif", Font.PLAIN, 50));
@@ -106,6 +118,8 @@ public class Proiect2OOP implements ActionListener {
 
         adaugaButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+
+                Logger.getInstance().writeLog(loggerMessageFormat("Adauga button pressed"));
                 String titlu = javax.swing.JOptionPane.showInputDialog("Titlul cartii: ");
                 String autor = javax.swing.JOptionPane.showInputDialog("Titlul cartii: ");
                 String costString = javax.swing.JOptionPane.showInputDialog("Costul cartii: ");
