@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.awt.*;
 import javax.swing.*;
+
+import classes.Librarie;
+
 import java.awt.event.*;
 
 public class Proiect2OOP implements ActionListener {

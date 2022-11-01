@@ -1,3 +1,5 @@
+package classes;
+
 public class Carte {
     private String titlu;
     private String autor;
