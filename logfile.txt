@@ -2,3 +2,40 @@ Adauga button pressedAdauga button pressed2022-11-01 17:42:12.335Adauga button p
 2022-11-01 17:43:29.503 : Adauga button pressed
 2022-11-01 17:43:32.887 : Adauga button pressed
 2022-11-01 17:43:36.937 : Adauga button pressed
+2022-11-01 18:11:27.703 : Stoc carti button pressed, no error
+2022-11-01 18:11:28.353 : Back button pressed, no error
+2022-11-01 18:11:28.727 : Adauga button pressed, no error
+2022-11-01 20:44:19.302 : Adauga button pressed, no error
+2022-11-01 20:44:23.885 : Adauga button pressed, no error
+2022-11-01 20:44:27.245 : Adauga button pressed, no error
+2022-11-01 20:44:44.326 : Adauga button pressed, no error
+2022-11-01 20:44:59.19 : Exit button pressed, no error
+2022-11-01 20:55:46.667 : Stoc carti button pressed, no error
+2022-11-01 20:55:47.674 : Back button pressed, no error
+2022-11-01 20:55:49.162 : Adauga button pressed, no error
+2022-11-01 20:55:52.825 : Stoc carti button pressed, no error
+2022-11-01 20:55:53.313 : Back button pressed, no error
+2022-11-01 20:55:53.849 : Exit button pressed, no error
+2022-11-01 21:08:00.493 : Adauga button pressed, no error
+2022-11-01 21:08:12.237 : Stoc carti button pressed, no error
+2022-11-01 21:08:13.924 : Back button pressed, no error
+2022-11-01 21:08:14.533 : Adauga button pressed, no error
+2022-11-01 21:08:24.82 : Adauga button pressed, no error
+2022-11-01 21:08:33.556 : Adauga button pressed, no error
+2022-11-01 21:08:40.988 : Exit button pressed, no error
+2022-11-01 21:09:02.99 : Stoc carti button pressed, no error
+2022-11-01 21:09:04.085 : Back button pressed, no error
+2022-11-01 21:09:04.941 : Exit button pressed, no error
+2022-11-01 21:10:00.599 : Stoc carti button pressed, no error
+2022-11-01 21:10:01.583 : Back button pressed, no error
+2022-11-01 21:10:01.966 : Exit button pressed, no error
+2022-11-01 21:10:38.007 : Stoc carti button pressed, no error
+2022-11-01 21:10:39.095 : Back button pressed, no error
+2022-11-01 21:10:39.695 : Adauga button pressed, no error
+2022-11-01 21:10:49.479 : Adauga button pressed, no error
+2022-11-01 21:11:02.695 : Stoc carti button pressed, no error
+2022-11-01 21:11:03.799 : Back button pressed, no error
+2022-11-01 21:11:04.175 : Exit button pressed, no error
+2022-11-01 21:11:10.114 : Stoc carti button pressed, no error
+2022-11-01 21:11:13.904 : Back button pressed, no error
+2022-11-01 21:11:14.551 : Exit button pressed, no error

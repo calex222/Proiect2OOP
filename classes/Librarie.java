@@ -1,14 +1,40 @@
 package classes;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Librarie extends LibrarieModel {
     ArrayList<Carte> carti = new ArrayList<Carte>();
-    private final int PRETMAXIMCARTE;
 
     // constructor
     public Librarie(int p) {
-        PRETMAXIMCARTE = p;
+        super(p);
+    }
+
+    public void initFromFile() {
+        File readFile = new File("cartiData.txt");
+        try {
+            Scanner sc = new Scanner(readFile);
+            while (sc.hasNextLine()) {
+                String titlu = sc.next();
+                String autor = sc.next();
+                int cost = sc.nextInt();
+                adaugaFromFile(titlu, autor, cost);
+            }
+            sc.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void adaugaFromFile(String titlu, String autor, int cost) {
+        Carte c = new Carte(titlu, autor, cost);
+        carti.add(c);
     }
 
     // public Librarie() {
@@ -17,19 +43,35 @@ public class Librarie extends LibrarieModel {
 
     // adauga o carte in librarie
     // in: un obiect de tip carte, care va fi adaugat in lista de carti
-    // out: no output, e constructor
+    // out: no output
     public void adaugaCarte(Carte c) {
-        if (!(c.getPret() >= PRETMAXIMCARTE))
+        if (!(c.getPret() >= PRETMAXIMCARTE)) {
             carti.add(c);
+            try {
+                FileWriter cartiData = new FileWriter("cartiData.txt", true);
+                cartiData.write("\n" + c.toString());
+                cartiData.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     // adauga creeaza un obiect de tip carte si il adauga in librarie
     // in: String titlu carte, String autor carte, int pret carte
-    // out: no output, e constructor
+    // out: no output
     public void adaugaCarte(String titlu, String autor, int pret) {
         if (!(pret >= PRETMAXIMCARTE)) {
             Carte c = new Carte(titlu, autor, pret);
             carti.add(c);
+
+            try {
+                FileWriter cartiData = new FileWriter("cartiData.txt", true);
+                cartiData.write("\n" + c.toString());
+                cartiData.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

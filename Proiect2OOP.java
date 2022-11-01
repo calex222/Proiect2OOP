@@ -39,6 +39,8 @@ public class Proiect2OOP implements ActionListener {
 
         Logger.getInstance().init();
 
+        libCarti.initFromFile();
+
         JLabel titluLibrarieLabel = new JLabel("LIBRARIE", SwingConstants.CENTER);
         titluLibrarieLabel.setFont(new Font("Serif", Font.PLAIN, 50));
         mainMenuPanel.setLayout(new GridLayout(5, 1));
@@ -75,6 +77,7 @@ public class Proiect2OOP implements ActionListener {
 
         backButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                Logger.getInstance().writeLog(loggerMessageFormat("Back button pressed, no error"));
                 stocMenuPanel.removeAll();
                 frame.remove(stocMenuPanel);
                 frame.remove(adaugaMenuPanel);
@@ -85,14 +88,23 @@ public class Proiect2OOP implements ActionListener {
             }
         });
 
+        scoateButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                frame.remove(mainMenuPanel);
+
+            }
+        });
+
         exitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                Logger.getInstance().writeLog(loggerMessageFormat("Exit button pressed, no error"));
                 System.exit(0);
             }
         });
 
         stocCartiButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                Logger.getInstance().writeLog(loggerMessageFormat("Stoc carti button pressed, no error"));
                 frame.remove(mainMenuPanel);
                 if (libCarti.getNrCarti() == 0) {
                     stocMenuPanel.setLayout(new GridLayout(2, 1));
@@ -119,7 +131,7 @@ public class Proiect2OOP implements ActionListener {
         adaugaButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                Logger.getInstance().writeLog(loggerMessageFormat("Adauga button pressed"));
+                Logger.getInstance().writeLog(loggerMessageFormat("Adauga button pressed, no error"));
                 String titlu = javax.swing.JOptionPane.showInputDialog("Titlul cartii: ");
                 String autor = javax.swing.JOptionPane.showInputDialog("Titlul cartii: ");
                 String costString = javax.swing.JOptionPane.showInputDialog("Costul cartii: ");

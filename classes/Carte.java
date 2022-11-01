@@ -52,6 +52,6 @@ public class Carte {
 
     // metoda to string, returneaza campurile cartii intr-un format ordonat
     public String toString() {
-        return (titlu + " de: " + autor + "; pret: " + pret);
+        return (titlu + " " + autor + " " + pret);
     }
 }
