@@ -15,6 +15,7 @@ public class Librarie extends LibrarieModel {
         super(p);
     }
 
+    // populeaza din fisier libraria
     public void initFromFile() {
         File readFile = new File("cartiData.txt");
         try {
@@ -32,6 +33,7 @@ public class Librarie extends LibrarieModel {
 
     }
 
+    // scoate cartea la index din fisier si din array list
     public void scoateCarteLaIndex(int i) {
         carti.remove(i);
         try {
@@ -45,6 +47,7 @@ public class Librarie extends LibrarieModel {
         }
     }
 
+    // folosit la a popula libraria
     private void adaugaFromFile(String titlu, String autor, int cost) {
         Carte c = new Carte(titlu, autor, cost);
         carti.add(c);

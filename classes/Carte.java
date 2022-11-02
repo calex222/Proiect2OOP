@@ -14,6 +14,8 @@ public class Carte implements ICarte {
         this.pret = pret;
     }
 
+    // constructor,
+    // creeaza o carte null
     public Carte() {
         titlu = null;
         autor = null;
@@ -55,6 +57,7 @@ public class Carte implements ICarte {
         return (titlu + " " + autor + " " + pret);
     }
 
+    // verifica daca cartea are autor, titlu si pret
     public boolean hasData() {
 
         return ((titlu != null) && (autor != null) && (pret != -1));
