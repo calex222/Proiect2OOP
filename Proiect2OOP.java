@@ -1,3 +1,16 @@
+
+/**
+ * Aplicatia stocheaza persistent datele unor carti
+ * Va incarca datele din fisier la pornirea aplicatiei
+ * Se pot adauga carti noi, sterge carti si interogare stoc
+ * 
+ * Ajuta la tinerea in evidenta a unui stoc de carti intr-o librarie sau chiar biblioteca daca se ignora pretul cartii
+ * 
+ * @author  calex222
+ * @version 0.9
+ * @since   2022-11-02 
+ */
+
 import java.util.ArrayList;
 import java.awt.*;
 import javax.swing.*;
