@@ -37,6 +37,7 @@ public class Proiect2OOP implements ActionListener {
     public void actionPerformed(ActionEvent e) {
     }
 
+    // helps format logger messages
     private String loggerMessageFormat(String s) {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         return (timestamp.toString() + " : " + s + "\n");
@@ -214,6 +215,8 @@ public class Proiect2OOP implements ActionListener {
 
     }
 
+    // checks if a string can be converted to int, returns true is so, false
+    // otherwise
     public static boolean isNumeric(String strNum) {
         if (strNum == null) {
             return false;

@@ -1,6 +1,6 @@
 package classes;
 
-public class Carte {
+public class Carte implements ICarte {
     private String titlu;
     private String autor;
     private int pret;
@@ -15,9 +15,9 @@ public class Carte {
     }
 
     public Carte() {
-        titlu = "FARA TITLU";
-        autor = "FARA AUTOR";
-        pret = 0;
+        titlu = null;
+        autor = null;
+        pret = -1;
     }
 
     // metoda get pentru titlu carte
@@ -53,5 +53,10 @@ public class Carte {
     // metoda to string, returneaza campurile cartii intr-un format ordonat
     public String toString() {
         return (titlu + " " + autor + " " + pret);
+    }
+
+    public boolean hasData() {
+
+        return ((titlu != null) && (autor != null) && (pret != -1));
     }
 }
